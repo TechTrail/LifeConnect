@@ -51,7 +51,7 @@
     <div class="container-fluid">
 	  <div class="row">
 		<div class="main" width="100%">
-		  <h3 class="sub-header">SEARCH</h3>
+		  <h3 class="sub-header">Search</h3>
 		</div>
 
 		<div class="container">
@@ -61,32 +61,34 @@
 					<td colspan=2><h4 class="form-signin-heading">Search for availability of blood/blood components</h4></td>
 				</tr><tr>
 					<td><label name='lbl1' class="text">Blood Component:</label></td>
-					<td><div class="btn-group">
-						<button data-toggle="dropdown" id="bloodcomponent" class="btn btn-default dropdown-toggle">Whole Blood <span class="caret"></span></button>
+					<td>
+						<button data-toggle="dropdown" name="bloodcomponent" class="btn btn-default dropdown-toggle">Whole Blood <span class="caret"></span></button>
 						<ul class="dropdown-menu">
-							<li><a href="javascript:alert(document.form.);">Packed Red Cells</a></li>
-							<li><a href="#">Fresh Frozen Plasma</a></li>
-							<li><a href="#">Platelets</a></li>
-							<li><a href="#">Cryo Precipitate</a></li>
-							<li><a href="#">Liquid Plasma</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodcomponent')[0].textContent='Whole Blood');">Whole Blood</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodcomponent')[0].textContent='Packed Red Cells');">Packed Red Cells</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodcomponent')[0].textContent='Fresh Frozen Plasma');">Fresh Frozen Plasma</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodcomponent')[0].textContent='Platelets');">Platelets</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodcomponent')[0].textContent='Cryo Precipitate');">Cryo Precipitate</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodcomponent')[0].textContent='Liquid Plasma');">Liquid Plasma</a></li>
 						</ul>
-					</div></td>
+					</td>
 
 					<!--input type="text" class="form-control" placeholder="Whole Blood" required autofocus></td-->
 				</tr><tr>
 					<td><label class="text">Blood Group:</label></td>
-					<td><div class="btn-group">
-						<button data-toggle="dropdown" id="bloodgroup" class="btn btn-default dropdown-toggle">O +ve <span class="caret"></span></button>
+					<td>
+						<button data-toggle="dropdown" name="bloodgroup" class="btn btn-default dropdown-toggle">O +ve <span class="caret"></span></button>
 						<ul class="dropdown-menu">
-							<li><a href="#">O -ve</a></li>
-							<li><a href="#">A +ve</a></li>
-							<li><a href="#">A -ve</a></li>
-							<li><a href="#">B +ve</a></li>
-							<li><a href="#">B -ve</a></li>
-							<li><a href="#">AB +ve</a></li>
-							<li><a href="#">AB -ve</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodgroup')[0].textContent='O +ve');">O +ve</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodgroup')[0].textContent='O -ve');">O -ve</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodgroup')[0].textContent='A +ve');">A +ve</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodgroup')[0].textContent='A -ve');">A -ve</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodgroup')[0].textContent='B +ve');">B +ve</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodgroup')[0].textContent='B -ve');">B -ve</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodgroup')[0].textContent='AB +ve');">AB +ve</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodgroup')[0].textContent='AB -ve');">AB -ve</a></li>
 						</ul>
-					</div></td>
+					</td>
 
 					<!--input type="text" class="form-control" placeholder="O +ve" required></td-->
 				</tr><tr>

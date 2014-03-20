@@ -14,7 +14,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-
+    <!-- Bootstrap datetime picker -->
+	<link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+	
     <!-- Custom styles for this template -->
     <link href="css/lcbasic.css" rel="stylesheet">
     <link href="css/lcsearch.css" rel="stylesheet">
@@ -50,53 +52,74 @@
 
     <div class="container-fluid">
 	  <div class="row">
+		<div class="main sub-header" width="100%">
+		  <table>
+		  	<tr>
+		  		<td><a class="btn btn-sm btn-primary" role="button" href="javascript:history.back()">&laquo; Back</a></td>
+		  		<td width="10px"></td>
+		  		<td><h3>New Request</h3></td>
+		  	</tr>
+		  </table>
+		</div>
+
 		<div class="main" width="100%">
-		  <h3 class="sub-header">SEARCH</h3>
+		  <h4 class="sub-header">Blood Bank: Jankalyan Blood Bank, Swargate, Pune</h4>
 		</div>
 
 		<div class="container">
-		  <form class="form-search" role="form">
+		  <form class="form-request" role="form">
 			<table>
 				<tr>
 					<td colspan=2><h4 class="form-signin-heading">Search for availability of blood/blood components</h4></td>
 				</tr><tr>
 					<td><label name='lbl1' class="text">Blood Component:</label></td>
-					<td><div class="btn-group">
-						<button data-toggle="dropdown" id="bloodcomponent" class="btn btn-default dropdown-toggle">Whole Blood <span class="caret"></span></button>
+					<td>
+						<button data-toggle="dropdown" name="bloodcomponent" class="btn btn-default dropdown-toggle">Whole Blood <span class="caret"></span></button>
 						<ul class="dropdown-menu">
-							<li><a href="javascript:alert(document.form.);">Packed Red Cells</a></li>
-							<li><a href="#">Fresh Frozen Plasma</a></li>
-							<li><a href="#">Platelets</a></li>
-							<li><a href="#">Cryo Precipitate</a></li>
-							<li><a href="#">Liquid Plasma</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodcomponent')[0].textContent='Whole Blood');">Whole Blood</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodcomponent')[0].textContent='Packed Red Cells');">Packed Red Cells</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodcomponent')[0].textContent='Fresh Frozen Plasma');">Fresh Frozen Plasma</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodcomponent')[0].textContent='Platelets');">Platelets</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodcomponent')[0].textContent='Cryo Precipitate');">Cryo Precipitate</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodcomponent')[0].textContent='Liquid Plasma');">Liquid Plasma</a></li>
 						</ul>
-					</div></td>
+					</td>
 
 					<!--input type="text" class="form-control" placeholder="Whole Blood" required autofocus></td-->
 				</tr><tr>
 					<td><label class="text">Blood Group:</label></td>
-					<td><div class="btn-group">
-						<button data-toggle="dropdown" id="bloodgroup" class="btn btn-default dropdown-toggle">O +ve <span class="caret"></span></button>
+					<td>
+						<button data-toggle="dropdown" name="bloodgroup" class="btn btn-default dropdown-toggle">O +ve <span class="caret"></span></button>
 						<ul class="dropdown-menu">
-							<li><a href="#">O -ve</a></li>
-							<li><a href="#">A +ve</a></li>
-							<li><a href="#">A -ve</a></li>
-							<li><a href="#">B +ve</a></li>
-							<li><a href="#">B -ve</a></li>
-							<li><a href="#">AB +ve</a></li>
-							<li><a href="#">AB -ve</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodgroup')[0].textContent='O +ve');">O +ve</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodgroup')[0].textContent='O -ve');">O -ve</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodgroup')[0].textContent='A +ve');">A +ve</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodgroup')[0].textContent='A -ve');">A -ve</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodgroup')[0].textContent='B +ve');">B +ve</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodgroup')[0].textContent='B -ve');">B -ve</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodgroup')[0].textContent='AB +ve');">AB +ve</a></li>
+							<li><a href="javascript:eval(document.getElementsByName('bloodgroup')[0].textContent='AB -ve');">AB -ve</a></li>
 						</ul>
-					</div></td>
+					</td>
 
 					<!--input type="text" class="form-control" placeholder="O +ve" required></td-->
 				</tr><tr>
-					<td><label class="text">City:</label></td>
-					<td><input type="dropdown" class="form-control" placeholder="Pune" required></td>
+					<td><label class="text">Number of units:</label></td>
+					<td><input class="form-control" placeholder="Units" required></td>
 				</tr><tr>
-					<td><label class="text">Location:</label></td>
-					<td><input type="text" class="form-control" placeholder="Anywhere"></td>
+					<td><label class="text">Expected Delivery Date-Time:</label></td>
+					<td>
+						<div class='input-group date' id='datetimepicker1'>
+		                    <input type='text' class="form-control" />
+		                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+		                    </span>
+		                </div>
+		                <script type="text/javascript">
+                            $('#datetimepicker1').datetimepicker();//{format: 'yyyy-mm-dd hh:ii', forceParse: true});
+                        </script>
+					</td>
 				</tr><tr>
-					<td></td><td><button class="btn btn-primary" style="align:center;" type="submit">Search</button></td>
+					<td></td><td><a class="btn btn-primary" role="button" href="reviewpage.html" type="submit">Make Request</a></td>
 				</tr>
 			</table>
 		  </form>
@@ -114,5 +137,13 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript">
+	    /*$(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii', forceParse: true});* /
+	    $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });*/
+	</script>
   </body>
 </html>
