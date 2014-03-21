@@ -14,7 +14,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
-
+	<!-- Responsive mode -->
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	
     <!-- Custom styles for this template -->
     <link href="css/lcbasic.css" rel="stylesheet">
     <link href="css/lcsearch.css" rel="stylesheet">
@@ -55,7 +57,7 @@
 		</div>
 
 		<div class="container">
-		  <form class="form-search" role="form">
+		  <form class="form-search" id="form-srch" role="form" method="post" action="searchresults.html">
 			<table>
 				<tr>
 					<td colspan=2><h4 class="form-signin-heading">Search for availability of blood/blood components</h4></td>
@@ -98,7 +100,7 @@
 					<td><label class="text">Location:</label></td>
 					<td><input type="text" class="form-control" placeholder="Anywhere"></td>
 				</tr><tr>
-					<td></td><td align="center"><a class="btn btn-primary" role="button" href="searchresults.html" type="submit">Search</a></td>
+					<td></td><td align="center"><button class="btn btn-primary" type="submit">Search</button></td>
 				</tr>
 			</table>
 		  </form>
