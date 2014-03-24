@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    
+    <title>Life-Connect</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Responsive mode -->
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<!-- Bootstrap datetime picker -->
+	<link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+	
+    <!-- Custom styles for this template -->
+    <link href="css/lcbasic.css" rel="stylesheet">
+    <link href="css/lcsearch.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+		  <a class="navbar-brand active" href="main.html">LIFE-CONNECT</a>
+		</div>
+
+		<div class="navbar-collapse collapse">
+		  <ul class="lc-nav navbar-nav navbar-right">
+			<li><a class="lc-nav" href="#">Settings</a></li>
+			<li><a class="lc-nav" href="#">Profile</a></li>
+			<li><a class="lc-nav" href="#">Help</a></li>
+		  </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+	  <div class="row">
+		<div class="main">
+		  <table width="100%">
+		  	<tr class="sub-header">
+		  		<td width="80px"><a class="btn btn-sm btn-primary" role="button" href="javascript:history.back()">&laquo; Back</a></td>
+		  		<td><h3>Request Summary</h3></td>
+		  	</tr>
+		  </table>
+		</div>
+
+		<div class="container">
+		  <form class="form-new-request" role="form" method="post" action="requestspage.html">
+			<table>
+				<tr>
+					<td colspan=2><h4 class="form-signin-heading">Blood component request summary</h4></td>
+				</tr><tr>
+					<td><label class="text">Patient Name:</label></td>
+					<td><label class="text">Mr. Ram Kulkarni</label></td>
+				</tr><tr>
+					<td><label class="text">Blood Bank:</label></td>
+					<td><label class="text">Jankalyan Blood Bank, Swargate, Pune</label></td>
+				</tr><tr>
+					<td><label class="text">Blood Component:</label></td>
+					<td><label class="text">Whole Blood</label></td>
+				</tr><tr>
+					<td><label class="text">Blood Group:</label></td>
+					<td><label class="text">O +ve</label></td>
+				</tr><tr>
+					<td><label class="text">Number of Units:</label></td>
+					<td><input class="form-control" value="1" required></td>
+				</tr><tr>
+					<td><label class="text">Request Date:</label></td>
+					<td><label class="text">22-03-2014 11:54 AM</label></td>
+				</tr><tr>
+					<td><label class="text">Expected Delivery Date-Time:</label></td>
+					<td>
+						<div class='input-group date' id='datetimepicker1'>
+		                    <input type='text' class="form-control" placeholder="25-03-2014 09:00 AM" readonly required/>
+		                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+		                    </span>
+		                </div>
+					</td>
+				</tr><tr>
+					<td><label class="text">Current Status:</label></td>
+					<td><label class="text">Requested</label></td>
+				</tr><tr>
+					<td><label class="text">Units Accepted:</label></td>
+					<td><label class="text"></label></td>
+				</tr><tr>
+					<td><label class="text">Status Details:</label></td>
+					<td><label class="text"></label></td>
+				</tr><tr>
+					<td><label class="text">Change Status:</label></td>
+					<td>
+					<button data-toggle="dropdown" name="newstatus" class="btn btn-default dropdown-toggle" disabled="true">Received <span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="javascript:eval(document.getElementsByName('newstatus')[0].textContent='Received');">Received</a></li>
+						<li><a href="javascript:eval(document.getElementsByName('newstatus')[0].textContent='Blood Sample Sent');">Blood Sample Sent</a></li>
+						<li><a href="javascript:eval(document.getElementsByName('newstatus')[0].textContent='Cancel Request');">Cancel Request</a></li>
+					</ul>
+				</td>
+				</tr><tr>
+					<td></td><td><button class="btn btn-primary" type="submit">Save</button></td>
+				</tr>
+			</table>
+		  </form>
+    	</div> <!-- /container -->
+	  </div>
+
+      <hr>
+
+      <footer>
+        <p>Copyrights 2014 &copy; TechTrail Technologies. All Rights Reserved.</p>
+      </footer>
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/moment.js"></script>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript">
+		$('#datetimepicker1').datetimepicker();
+    </script>
+  </body>
+</html>
